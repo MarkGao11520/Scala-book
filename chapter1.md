@@ -56,10 +56,12 @@ res2: Int = 12
 scala> res0 * res1
 res3: Int = 16
 
-scala> println("我就不说 hello word")
-我就不说 hello word
+scala> println("hello word")
+hello word
 scala>
 ```
+
+## 1.4 Scala和Java版本Hello World对比
 
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-9fd8d5387ab4bf72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
