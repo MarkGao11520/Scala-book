@@ -19,3 +19,13 @@
 
 
 ## 1.3 Scala安装
+
+
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-2e23e75c33c3342c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/12
+1. 安装Java8
+2. 下载Scala-2.11.8 https://www.scala-lang.org/download/2.11.8.html
+
+
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-2e23e75c33c3342c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
