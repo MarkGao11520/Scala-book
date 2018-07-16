@@ -56,7 +56,7 @@ res2: Int = 12
 scala> res0 * res1
 res3: Int = 16
 
-scala> print("我就不说 hello word")
+scala> println("我就不说 hello word")
 我就不说 hello word
 scala>
 ```
