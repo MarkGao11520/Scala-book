@@ -23,7 +23,26 @@
 1. 安装Java8
 2. 下载Scala-2.11.8 https://www.scala-lang.org/download/2.11.8.html
 
-
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-2e23e75c33c3342c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+3. 解压 tar -zxcf scala-2.11.8.tar.gz
+
+4. 配置环境变量
+```shell
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home"
+export PATH=$JAVA_HOME/bin:$PATH
+
+export SCALA_HOME="/Users/markgao/source/scala-2.11.8"
+export PATH=$SCALA_HOME/bin:$PATH
+```
+
+5. 验证
+
+```
+➜  scala-2.11.8 scala
+Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_171).
+Type in expressions for evaluation. Or try :help.
+
+scala>
+```
 
