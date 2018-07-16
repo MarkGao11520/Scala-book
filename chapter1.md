@@ -43,3 +43,6 @@ Type in expressions for evaluation. Or try :help.
 scala>
 ```
 
+
+## 1.3 Scala使用入门
+
