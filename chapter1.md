@@ -46,3 +46,17 @@ scala>
 
 ## 1.3 Scala使用入门
 
+```
+scala> 1+3
+res1: Int = 4 // 自动识别类型 
+
+scala> res1 * 3 //自动给返回结果赋值给变量
+res2: Int = 12 
+
+scala> res0 * res1
+res3: Int = 16
+
+scala> print("我就不说 hello word")
+我就不说 hello word
+scala>
+```
