@@ -35,7 +35,7 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 5. 验证
 
-```shell
+```
 ➜  scala-2.11.8 scala
 Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_171).
 Type in expressions for evaluation. Or try :help.
