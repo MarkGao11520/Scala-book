@@ -62,3 +62,6 @@ scala>
 ```
 
 Scala毎行代碼并不強求使用結束,但是Java是必須的
+
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-9fd8d5387ab4bf72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
