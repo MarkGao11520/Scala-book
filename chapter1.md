@@ -61,4 +61,4 @@ scala> println("我就不说 hello word")
 scala>
 ```
 
-Sca la毎行代碼并不強求使用結束,但是Java是必須的
+Scala毎行代碼并不強求使用結束,但是Java是必須的
