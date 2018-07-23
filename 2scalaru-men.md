@@ -41,3 +41,4 @@ h: Boolean = true
 ```
 
 ### 3.Lazy在Scala中的使用
+耗费计算或者网络的时候使用比较多（如IO）
