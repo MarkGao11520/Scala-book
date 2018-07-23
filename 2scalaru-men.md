@@ -74,6 +74,15 @@ scala>
 1. 起项目名一路Next，选择自己安装的Maven地址,然后继续Next
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-0cdf36b97ce9372c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 1. 第一次创建项目需要下载依赖包可能会比较慢
+1. 去Plugin里下载Scala的Plugin,下载完成后重启
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-8d765f1cf4bf1fe6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1. 添加Scala-SDK
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-ae20122791aa2c21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1. 编写Hello World程序
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-45a17179eb7cc24e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
 
 
 
