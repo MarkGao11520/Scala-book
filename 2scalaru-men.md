@@ -68,3 +68,8 @@ scala>
 - NetBeans:
 
 ### 4.使用IDEA整合Maven构建应用程序
+
+1. 新建项目勾选 Create from archetype 并选择scala-archetype-simple
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-658b8640fb489065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1. 起项目名一路Next，选择自己安装的Maven地址
+
