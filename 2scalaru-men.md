@@ -60,3 +60,11 @@ res10: String =
 
 scala>
 ```
+
+### 4.Scala 常用IDE
+
+- IDEA:
+- Eclipse:
+- NetBeans:
+
+### 4.使用IDEA整合Maven构建应用程序
