@@ -73,6 +73,7 @@ scala>
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-658b8640fb489065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 1. 起项目名一路Next，选择自己安装的Maven地址,然后继续Next
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-0cdf36b97ce9372c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1. 第一次创建项目需要下载依赖包可能会比较慢
 
 
 
