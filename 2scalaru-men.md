@@ -40,3 +40,4 @@ h: Boolean = true
 
 ```
 
+### 3.Lazy在Scala中的使用
