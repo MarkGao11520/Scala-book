@@ -7,4 +7,26 @@
 - var: 变量
     - 可变
     - var 值名称:类型 = xxx
+    
+    
+### 2.Scala 基本数据类型
+
+- Byte/Char
+- 
+
+```scala
+scala> var d = 1.1
+d: Double = 1.1
+
+scala> var e:Float = 1.1
+<console>:11: error: type mismatch;
+ found   : Double(1.1)
+ required: Float
+       var e:Float = 1.1
+                     ^
+
+scala> var e:Float = 1.1f
+e: Float = 1.1
+
+```
 
