@@ -41,4 +41,22 @@ h: Boolean = true
 ```
 
 ### 3.Lazy在Scala中的使用
-耗费计算资源或者网络的时候使用比较多（如IO）
+- 定义的时候不会执行，只有在第一次使用的时候才会执行
+- 耗费计算资源或者网络的时候使用比较多（如IO）
+
+```scala
+scala> val info = fromFile("/Users/markgao/Desktop/hello.txt").mkString
+info: String =
+"hello
+"
+
+scala> lazy val info = fromFile("/Users/markgao/Desktop/hello.txt").mkString
+info: String = <lazy>
+
+scala> info
+res10: String =
+"hello
+"
+
+scala>
+```
