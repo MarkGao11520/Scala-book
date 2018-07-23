@@ -12,8 +12,10 @@
 ### 2.Scala 基本数据类型
 
 - Byte/Char
+- Short/Int/Long/Float/Double
 - 
 
+类型转换基本操作
 ```scala
 scala> var d = 1.1
 d: Double = 1.1
