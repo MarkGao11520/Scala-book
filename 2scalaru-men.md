@@ -13,7 +13,7 @@
 
 - Byte/Char
 - Short/Int/Long/Float/Double
-- 
+- Boolean
 
 类型转换基本操作
 ```scala
@@ -26,9 +26,17 @@ scala> var e:Float = 1.1
  required: Float
        var e:Float = 1.1
                      ^
-
 scala> var e:Float = 1.1f
 e: Float = 1.1
+
+scala> val f = 10
+f: Int = 10
+
+scala> val g = 10.asInstanceOf[Double]
+g: Double = 10.0
+
+scala> val h = 10.isInstanceOf[Int]
+h: Boolean = true
 
 ```
 
