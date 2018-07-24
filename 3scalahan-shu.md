@@ -167,7 +167,7 @@ class Range(val start: Int, val end: Int, val step: Int)
 常用循环
 
 ```scala
-  for(i<-1 to 10 if i%2==0){  // if作用在前面生成的列表基础上
+     for(i<-1 to 10 if i%2==0){  // if作用在前面生成的列表基础上
           println(i)
       }
 
