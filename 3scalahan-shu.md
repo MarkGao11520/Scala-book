@@ -54,3 +54,17 @@ $SPARK_HOME/conf/spark-defaults.conf
 
 
 ## 3.命名参数
+```
+  object FunctionApp {
+
+  def main(args: Array[String]): Unit = {
+      println(speed(100,10))
+      println(speed(time=10,distance=100)) // 根据参数名进行传参 // 不建议
+  }
+  
+  def speed(distance:Float,time:Float ):Float={
+    distance/time
+  }
+  
+  }
+```
