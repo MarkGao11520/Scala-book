@@ -36,6 +36,15 @@ object FunctionApp {
 }
 
 ```
+```
+2
+3
+3
+say hello
+say hello
+
+Process finished with exit code 0
+```
 
 ## 2.默认参数
 默认参数:在函数定义时，允许指定参数的默认值
