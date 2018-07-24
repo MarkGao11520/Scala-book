@@ -112,7 +112,7 @@ if(a>0) true else false
 
 Range源码
 
-```
+```scala
 /** Make a range from `start` until `end` (exclusive) with given step value.
    * @note step != 0
    */
@@ -133,18 +133,11 @@ extends scala.collection.AbstractSeq[Int]
   private def hasStub       = isInclusive || !isExact
   private def longLength    = gap / step + ( if (hasStub) 1 else 0 )
 
-  // Check cannot be evaluated eagerly because we have a pattern where
-  // ranges are constructed like: "x to y by z" The "x to y" piece
-  // should not trigger an exception. So the calculation is delayed,
-  // which means it will not fail fast for those cases where failing was
-  // correct.
-  override final val isEmpty = (
-       (start > end && step > 0)
-    || (start < end && step < 0)
-    || (start == end && !isInclusive)
-  )
+...
+
   @deprecated("This method will be made private, use `length` instead.", "2.11")
   final val numRangeElements: Int = {
+    // 如果step==0则抛异常
     if (step == 0) throw new IllegalArgumentException("step cannot be 0.")
     else if (isEmpty) 0
     else {
@@ -153,6 +146,7 @@ extends scala.collection.AbstractSeq[Int]
       else len.toInt
     }
   }
+  ...
 }
 ```
 
