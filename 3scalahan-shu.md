@@ -110,6 +110,32 @@ if(a>0) true else false
 
 ## 6.循环表达式
 
+```scala
+scala> 1 to 10 // 左闭右闭
+res11: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala> Range(1,10) // 左闭右开
+res12: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+scala> 1.to(10)  // 等同于 1 to 10
+res13: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala> Range(1,10,2) // 可以选择步长
+res14: scala.collection.immutable.Range = Range(1, 3, 5, 7, 9)
+
+scala> Range(1,10,0) // 步长不可以为0，死循环
+java.lang.IllegalArgumentException: step cannot be 0.
+  at scala.collection.immutable.Range.<init>(Range.scala:86)
+  at scala.collection.immutable.Range$.apply(Range.scala:439)
+  ... 32 elided
+
+scala>  Range(10,0,-1)  // 可以从大到小来
+res16: scala.collection.immutable.Range = Range(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+
+scala> 1 until 10 // 左闭右开 底层调用的Range
+res17: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
+```
+
 Range源码
 
 ```scala
