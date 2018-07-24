@@ -164,3 +164,28 @@ class Range(val start: Int, val end: Int, val step: Int)
 }
 ```
 
+常用循环
+
+```scala
+  for(i<-1 to 10 if i%2==0){  // if作用在前面生成的列表基础上
+          println(i)
+      }
+
+      val courses = Array("spark sql","spark streaming","storm","scala")
+
+      for(course<-courses){
+        println(course)
+      }
+
+      //course其实就是courses里面的每个元素
+      //==> 就是将左边的couse作用上一个函数，变成另外一个结果
+      // println 就是作用到course.上的一个函数
+      courses.foreach(course => println(course))
+
+      var (num,sum) = (100, 0)
+      while (num>0){
+        sum+=num
+        num -= 1
+      }
+      println(num)
+```
