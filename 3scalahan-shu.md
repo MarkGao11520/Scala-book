@@ -50,6 +50,7 @@ Process finished with exit code 0
 默认参数:在函数定义时，允许指定参数的默认值
 $SPARK_HOME/conf/spark-defaults.conf
 
+spark中的应用
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-66a0352fea770f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -96,3 +97,7 @@ object FunctionApp {
 }
 
 ```
+spark-sql 中的应用
+
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-26618e0f415444ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
