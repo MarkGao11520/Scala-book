@@ -121,18 +121,6 @@ Range源码
 @SerialVersionUID(7618862778670199309L)
 @deprecatedInheritance("The implementation details of Range makes inheriting from it unwise.", "2.11.0")
 class Range(val start: Int, val end: Int, val step: Int)
-extends scala.collection.AbstractSeq[Int]
-   with IndexedSeq[Int]
-   with scala.collection.CustomParallelizable[Int, ParRange]
-   with Serializable
-{
-  override def par = new ParRange(this)
-
-  private def gap           = end.toLong - start.toLong
-  private def isExact       = gap % step == 0
-  private def hasStub       = isInclusive || !isExact
-  private def longLength    = gap / step + ( if (hasStub) 1 else 0 )
-
 ...
 
   @deprecated("This method will be made private, use `length` instead.", "2.11")
