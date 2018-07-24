@@ -72,3 +72,25 @@ object FunctionApp {
 
 ## 4.可变参数
 JDK5+ : 提供了可变参数
+```
+package com.gwf.course03
+
+object FunctionApp {
+
+  def main(args: Array[String]): Unit = {
+      println(sum(1,2,3,4))
+      println(sum(1,2,3))
+  }
+
+
+
+  def sum(numbers:Int*)={
+    var result = 0
+    for(num <- numbers){
+      result += num
+    }
+    result
+  }
+}
+
+```
