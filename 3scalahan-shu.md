@@ -71,3 +71,4 @@ object FunctionApp {
 
 
 ## 4.可变参数
+JDK5+ : 提供了可变参数
