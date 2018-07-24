@@ -54,8 +54,8 @@ $SPARK_HOME/conf/spark-defaults.conf
 
 
 ## 3.命名参数
-```
-  object FunctionApp {
+```scala
+object FunctionApp {
 
   def main(args: Array[String]): Unit = {
       println(speed(100,10))
@@ -66,5 +66,5 @@ $SPARK_HOME/conf/spark-defaults.conf
     distance/time
   }
   
-  }
+}
 ```
