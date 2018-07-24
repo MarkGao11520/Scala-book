@@ -11,3 +11,29 @@ def 方法名(参数名:参数类型):返回类型 ={
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-a0b0ba43b1eb94b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+```scala
+package com.gwf.course03
+
+object FunctionApp {
+
+  def main(args: Array[String]): Unit = {
+      println(add(1,1))
+      println(three())
+      println(three) // 没有入参的函数，调用时是可以省略的
+      sayHello()
+      sayHello
+  }
+
+  def add(x:Int,y:Int):Int={
+    x+y // 最后一行就是返回值，不需要返回
+  }
+
+  def three()=1+2  // 可以自动判断返回类型
+
+  def sayHello(): Unit ={ // Unit 代表没有返回值
+      println("say hello")
+  }
+}
+
+```
+
