@@ -110,3 +110,49 @@ if(a>0) true else false
 
 ## 6.循环表达式
 
+Range源码
+
+```
+/** Make a range from `start` until `end` (exclusive) with given step value.
+   * @note step != 0
+   */
+  def apply(start: Int, end: Int, step: Int): Range = new Range(start, end, step)
+
+@SerialVersionUID(7618862778670199309L)
+@deprecatedInheritance("The implementation details of Range makes inheriting from it unwise.", "2.11.0")
+class Range(val start: Int, val end: Int, val step: Int)
+extends scala.collection.AbstractSeq[Int]
+   with IndexedSeq[Int]
+   with scala.collection.CustomParallelizable[Int, ParRange]
+   with Serializable
+{
+  override def par = new ParRange(this)
+
+  private def gap           = end.toLong - start.toLong
+  private def isExact       = gap % step == 0
+  private def hasStub       = isInclusive || !isExact
+  private def longLength    = gap / step + ( if (hasStub) 1 else 0 )
+
+  // Check cannot be evaluated eagerly because we have a pattern where
+  // ranges are constructed like: "x to y by z" The "x to y" piece
+  // should not trigger an exception. So the calculation is delayed,
+  // which means it will not fail fast for those cases where failing was
+  // correct.
+  override final val isEmpty = (
+       (start > end && step > 0)
+    || (start < end && step < 0)
+    || (start == end && !isInclusive)
+  )
+  @deprecated("This method will be made private, use `length` instead.", "2.11")
+  final val numRangeElements: Int = {
+    if (step == 0) throw new IllegalArgumentException("step cannot be 0.")
+    else if (isEmpty) 0
+    else {
+      val len = longLength
+      if (len > scala.Int.MaxValue) -1
+      else len.toInt
+    }
+  }
+}
+```
+
