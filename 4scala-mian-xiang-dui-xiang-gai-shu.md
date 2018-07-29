@@ -205,7 +205,7 @@ object ApplyTest{
 }
 ```
 
-### 9.伴生类
+### 9.case class
 
 ```java
 package com.gwf.scala.course04
@@ -218,7 +218,6 @@ object CaseClassApp {
 }
 
 case class Dog(name:String)
-
 ```
 
 
