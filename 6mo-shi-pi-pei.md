@@ -15,5 +15,20 @@ Scala:
 }
 ```
 
+```java
+object MatchApp extends App {
+
+  val names = Array("zhangsan","lisi","wangwu")
+  val name = names(Random.nextInt(names.length))
+
+  name match {
+    case "zhangsan" => println("张三...")
+    case "lisi" => println("李四...")
+    case _ => println("真的不知道你们在说什么")
+  }
+
+}
+```
+
 
 
