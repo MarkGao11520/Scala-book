@@ -135,5 +135,19 @@ class Student2 extends Person2{
 
 ### 7.伴生类和伴生对象
 
+```java
+/**
+  * 如果有一个class,还有一个与class同名的object
+  * 那么就称称这个个object是class的伴生対象, class是object的伴生类，两者相辅相成
+  */
+class ApplyTest{
+
+}
+
+object ApplyTest{
+
+}
+```
+
 
 
