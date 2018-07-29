@@ -103,7 +103,37 @@ scala>
 
 ### 3. List
 
+```java
+scala> Nil // 代表一个空的list
+res26: scala.collection.immutable.Nil.type = List()
 
+scala> val l = List(1,2,3,4,5)
+l: List[Int] = List(1, 2, 3, 4, 5)
+
+scala> l.head   // 一个list由head和tail组成，head是第一个元素，tail是剩下元素组成的list
+res27: Int = 1
+
+scala> l.tail
+res28: List[Int] = List(2, 3, 4, 5)
+
+scala> val l2 = 1 :: Nil  // 使用::拼接一个新的list 
+l2: List[Int] = List(1)
+
+scala> val l3 = 2 :: l2
+l3: List[Int] = List(2, 1)
+
+scala> val l4 = 1 :: 2 :: 3 :: Nil
+l4: List[Int] = List(1, 2, 3)
+
+scala>   val l5 = scala.collection.mutable.ListBuffer[Int]()  // 变上的List
+l5: scala.collection.mutable.ListBuffer[Int] = ListBuffer()
+
+scala> l5+=2  //操作和之前的变长数组一样
+res29: l5.type = ListBuffer(2)
+
+scala> println(l5)
+ListBuffer(2)
+```
 
 
 
