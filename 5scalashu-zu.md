@@ -10,10 +10,25 @@ scala> val b = Array("a","b","c")
 b: Array[String] = Array(a, b, c)
 
 scala> b.length
-length   lengthCompare
-
-scala> b.length
 res0: Int = 3
+
+scala> val b = Array(1,2,3)
+b: Array[Int] = Array(1, 2, 3)
+
+scala> b.sum
+res2: Int = 6
+
+scala> b.max
+res3: Int = 3
+
+scala> b.min
+res4: Int = 1
+
+scala> b.mkString(",")
+res5: String = 1,2,3
+
+scala> b.mkString("[",",","]")
+res6: String = [1,2,3]
 
 scala>
 ```
@@ -35,8 +50,6 @@ Array\(\) 的源码
     array
   }
 ```
-
-
 
 
 
