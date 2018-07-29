@@ -151,7 +151,60 @@ object ApplyTest{
 
 ### 8.Apply 方法
 
+```java
+package com.gwf.scala.course04
 
+object ApplyApp {
+  def main(args: Array[String]): Unit = {
+    for(i <- 1 to 10){
+      ApplyTest.incr
+    }
+
+    println("count:"+ApplyTest.count) // 10 说明object本身就是一个单例对象
+
+    println("~~~~~~~~~~~~~")
+    val b = ApplyTest() // ==>Object.
+
+    println("~~~~~~~~~~~~~")
+    val c = new ApplyTest()
+    println(c)
+    c() // ==>Class.
+
+    // 类名() ===> Object.apply
+    // 对象() ===> Class.apply
+  }
+}
+
+/**
+  * 如果有一个class,还有一个与class同名的object
+  * 那么就称称这个个object是class的伴生対象, class是object的伴生类，两者相辅相成
+  */
+class ApplyTest{
+  def apply()= {
+    println("Class ApplyTest apply...")
+  }
+}
+
+object ApplyTest{
+
+  println("Object ApplyTest enter...")
+
+  var count = 0
+
+  def incr = {
+    count = count + 1
+  }
+
+  // 最佳实践:在0bject的apply方法中去new Class
+  def apply()= {
+    println("Object ApplyTest apply...")
+  }
+
+  println("Object ApplyTest leave...")
+
+}
+
+```
 
 
 
