@@ -51,7 +51,6 @@ object MatchApp extends App {
 
 ### 4.List模式匹配
 
-
-
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-0c07a8217979977e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
