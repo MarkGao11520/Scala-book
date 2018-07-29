@@ -218,6 +218,17 @@ object CaseClassApp {
 }
 
 case class Dog(name:String)
+
+```
+
+### 10.Trait
+
+Trait 类似于java的接口，但是可以集成抽象类，并实现其抽象方法。
+
+```
+// Triat多集成：XXX extends ATrait with BTrait
+class SparkConf(loadDefaults: Boolean) extends Cloneable with Logging with Serializable {
+
 ```
 
 
