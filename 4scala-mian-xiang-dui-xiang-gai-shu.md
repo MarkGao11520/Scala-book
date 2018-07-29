@@ -88,10 +88,23 @@ scala>
 
 ### 4.继承
 
-```
+```java
   // 子类继承父类，父类的属性在子类构造函数中可以不加val/var声明，子类特有的属性必须要加，否则也会变成private[this] val
   class Student(name:String,age:Int,other:String,val school:String) extends Person(name,age,other){
-    
+
+  }
+```
+
+### 5.重写
+
+```java
+  class Student(name:String,age:Int,other:String,val school:String) extends Person(name,age,other){
+
+    // 重写必须加override
+    override val country: String = "USA"
+
+    // $代表this
+    override def toString = s"Student($country, $school)"
   }
 ```
 
