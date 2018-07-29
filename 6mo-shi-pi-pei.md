@@ -66,3 +66,7 @@ object MatchApp extends App {
 
 
 
+### 6.Scala异常处理
+
+
+
