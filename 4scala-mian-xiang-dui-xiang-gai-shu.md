@@ -133,5 +133,7 @@ class Student2 extends Person2{
 }
 ```
 
+### 7.伴生类和伴生对象
+
 
 
