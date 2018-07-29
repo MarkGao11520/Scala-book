@@ -32,5 +32,11 @@ object MatchApp extends App {
 
 ### 2.加条件进行匹配
 
+![](https://upload-images.jianshu.io/upload_images/7220971-19e9d2c8b817f6b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 3.Array模式匹配
+
+
+
 
 
