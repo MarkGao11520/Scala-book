@@ -68,5 +68,6 @@ object MatchApp extends App {
 
 ### 6.Scala异常处理
 
+![image.png](https://upload-images.jianshu.io/upload_images/7220971-a25b0238e52ddc25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
