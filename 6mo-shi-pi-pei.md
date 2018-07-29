@@ -71,3 +71,20 @@ object MatchApp extends App {
 ![image.png](https://upload-images.jianshu.io/upload_images/7220971-a25b0238e52ddc25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
+### 7.case class
+
+```scala
+  class Person
+  case class CTO(name: String,floor:Int) extends Person
+  case class Employee(name: String,floor:Int) extends Person
+  case class Other(name:String) extends Person
+
+  def caseclassMatch(person: Person)={
+    person match{
+      case CTO(name,floor) => println("CTO name is "+name+", floor is "+floor)
+      case Employee(name,floor) => println("Employee name is "+name+", floor is "+floor)
+      case _ => println("other")
+    }
+  }
+```
+
