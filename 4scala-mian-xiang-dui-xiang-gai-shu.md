@@ -46,7 +46,6 @@ object SimpleObjectApp {
 
   }
 }
-
 ```
 
 ```
@@ -67,11 +66,25 @@ s: String = null
 scala>
 ```
 
-
-
 ### 3.主构造器和附属构造器
 
+```java
+  // 主构造器,如果不加val/var修饰符则默认是private[this] val 类型
+  class Person(val name:String,val age:Int,other:String){ 
+    println("Person Constructor enter...")
+    val school = "ustc"
+    var gender:String = _
 
+    def getOther(): String = other
+
+    def this(name:String,age:Int,other:String,gender:String){
+      this(name,age,other) // 附属构造器的第一行必须调用主构造器或者其他构造器
+      this.gender = gender
+    }
+    println("Person Constructor leave...")
+
+  }
+```
 
 
 
