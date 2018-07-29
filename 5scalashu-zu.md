@@ -35,7 +35,7 @@ scala>
 
 Array\(\) 的源码
 
-```
+```java
   /** Creates an array with given elements.
    *
    *  @param xs the elements to put in the array
