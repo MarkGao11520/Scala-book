@@ -137,5 +137,13 @@ ListBuffer(2)
 
 ### 4. Set
 
+```
+scala> val s = Set(1,2,3,3,4,5)
+s: scala.collection.immutable.Set[Int] = Set(5, 1, 2, 3, 4)
+
+scala>   val s1 = scala.collection.mutable.Set[Int]()
+s1: scala.collection.mutable.Set[Int] = Set()
+```
+
 
 
