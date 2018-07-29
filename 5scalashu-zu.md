@@ -51,8 +51,6 @@ Array\(\) 的源码
   }
 ```
 
-
-
 ### 2. 变长数组
 
 ```java
@@ -102,6 +100,10 @@ scala>   for(i <- (0 until d.length).reverse){  // 从后往前遍历
 7 6 5 4
 scala>
 ```
+
+### 3. List
+
+
 
 
 
