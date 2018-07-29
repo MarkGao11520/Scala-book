@@ -108,5 +108,30 @@ scala>
   }
 ```
 
+### 6.抽象类
+
+```java
+/**
+  * 类的一个或者多个方法没有完整的实现(只有定义，没有实现)
+  */
+abstract class Person2{
+  def speak
+
+  var name:String
+
+  var age:Int
+}
+
+/**
+  * 普通了继承抽象类要实现未实现的抽象方法和抽象属性
+  */
+class Student2 extends Person2{
+  override def speak: Unit = println("speak")
+
+  override var name: String = _
+  override var age: Int = _
+}
+```
+
 
 
