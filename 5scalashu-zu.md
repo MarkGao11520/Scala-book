@@ -148,6 +148,59 @@ s1: scala.collection.mutable.Set[Int] = Set()
 
 ### 5. Map
 
+- 实例化的几种方式
+
+```scala
+  // 不可变
+  val a = Map("gwf"->18,"mzh"->24)
+  // 可变
+  val b = scala.collection.mutable.Map("gwf"->18,"mzh"->24)
+  // 可变hashmap
+  val c = scala.collection.mutable.HashMap[String,Int]()
+```
+
+- 增删改
+
+```scala
+  scala> b("lisi")
+java.util.NoSuchElementException: key not found: lisi
+  at scala.collection.MapLike$class.default(MapLike.scala:228)
+  at scala.collection.AbstractMap.default(Map.scala:59)
+  at scala.collection.mutable.HashMap.apply(HashMap.scala:65)
+  ... 32 elided
+
+scala> b.get("PK")
+res39: Option[Int] = None
+
+scala> b.get("PK").get
+java.util.NoSuchElementException: None.get
+  at scala.None$.get(Option.scala:347)
+  at scala.None$.get(Option.scala:345)
+  ... 32 elided
+
+scala> b.get("gwf").get
+res41: Int = 16
+
+scala> b.getOrElse("jd",9)
+res42: Int = 9
+
+scala> b.getOrElse("gwf",9)
+res43: Int = 16
+
+scala> b("list") = 9
+
+scala> b+=("wangwu"->4,"zhouliu"->5)
+res45: b.type = Map(zhouliu -> 5, gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
+
+scala> b-=zhouliu
+<console>:13: error: not found: value zhouliu
+       b-=zhouliu
+          ^
+
+scala> b-="zhouliu"
+res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
+```
+
 
 
 
