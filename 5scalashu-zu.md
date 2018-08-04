@@ -264,3 +264,65 @@ object TupleApp extends App {
 }
 ```
 
+### 8.Either&LEFT&RIGHT
+
+```scala
+/** Represents a value of one of two possible types (a disjoint union.)
+ *  Instances of Either are either an instance of [[scala.util.Left]] or [[scala.util.Right]].
+ *
+ *  A common use of Either is as an alternative to [[scala.Option]] for dealing
+ *  with possible missing values.  In this usage, [[scala.None]] is replaced
+ *  with a [[scala.util.Left]] which can contain useful information.
+ *  [[scala.util.Right]] takes the place of [[scala.Some]].  Convention dictates
+ *  that Left is used for failure and Right is used for success.
+ *
+ *  For example, you could use `Either[String, Int]` to detect whether a
+ *  received input is a String or an Int.
+ *
+ *  {{{
+ *  val in = Console.readLine("Type Either a string or an Int: ")
+ *  val result: Either[String,Int] = try {
+ *      Right(in.toInt)
+ *    } catch {
+ *      case e: Exception =>
+ *        Left(in)
+ *  }
+ *
+ *  println( result match {
+ *    case Right(x) => "You passed me the Int: " + x + ", which I will increment. " + x + " + 1 = " + (x+1)
+ *    case Left(x) => "You passed me the String: " + x
+ *  })
+ *  }}}
+ *
+ *  A ''projection'' can be used to selectively operate on a value of type Either,
+ *  depending on whether it is of type Left or Right. For example, to transform an
+ *  Either using a function, in the case where it's a Left, one can first apply
+ *  the `left` projection and invoke `map` on that projected Either. If a `right`
+ *  projection is applied to that Left, the original Left is returned, unmodified.
+ *
+ *  {{{
+ *  val l: Either[String, Int] = Left("flower")
+ *  val r: Either[String, Int] = Right(12)
+ *  l.left.map(_.size): Either[Int, Int] // Left(6)
+ *  r.left.map(_.size): Either[Int, Int] // Right(12)
+ *  l.right.map(_.toDouble): Either[String, Double] // Left("flower")
+ *  r.right.map(_.toDouble): Either[String, Double] // Right(12.0)
+ *  }}}
+ *
+ *  Like with other types which define a `map` method, the same can be achieved
+ *  using a for-comprehension:
+ *  {{{
+ *  for (s <- l.left) yield s.size // Left(6)
+ *  }}}
+ *
+ *  To support multiple projections as generators in for-comprehensions, the Either
+ *  type also defines a `flatMap` method.
+ *
+ *  @author <a href="mailto:research@workingmouse.com">Tony Morris</a>, Workingmouse
+ *  @version 1.0, 11/10/2008
+ *  @since 2.7
+ */
+sealed abstract class Either[+A, +B] {
+```
+
+
