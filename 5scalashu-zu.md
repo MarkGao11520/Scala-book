@@ -159,7 +159,7 @@ s1: scala.collection.mutable.Set[Int] = Set()
   val c = scala.collection.mutable.HashMap[String,Int]()
 ```
 
-- 增删改
+- 增删改查
 
 ```scala
   scala> b("lisi")  // 查询不到会报错
@@ -194,6 +194,21 @@ res45: b.type = Map(zhouliu -> 5, gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
 
 scala> b-="zhouliu"  // 删除元素
 res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
+```
+
+-- 遍历
+```scala
+  for((key,value)<-b){
+    println(key + " "+ value)
+  }
+
+  for(ele <- b.keySet){
+    println(ele+" " + b.getOrElse(ele,9))
+  }
+
+  for((key,_)<-b){
+    println(key+" " + b.getOrElse(key,9))
+  }
 ```
 
 
