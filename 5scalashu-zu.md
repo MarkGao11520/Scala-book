@@ -196,7 +196,7 @@ scala> b-="zhouliu"  // 删除元素
 res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
 ```
 
--- 遍历
+- 遍历
 ```scala
   for((key,value)<-b){
     println(key + " "+ value)
