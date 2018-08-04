@@ -162,42 +162,37 @@ s1: scala.collection.mutable.Set[Int] = Set()
 - 增删改
 
 ```scala
-  scala> b("lisi")
+  scala> b("lisi")  // 查询不到会报错
 java.util.NoSuchElementException: key not found: lisi
   at scala.collection.MapLike$class.default(MapLike.scala:228)
   at scala.collection.AbstractMap.default(Map.scala:59)
   at scala.collection.mutable.HashMap.apply(HashMap.scala:65)
   ... 32 elided
 
-scala> b.get("PK")
+scala> b.get("PK") // 返回一个Option类型
 res39: Option[Int] = None
 
-scala> b.get("PK").get
+scala> b.get("PK").get   
 java.util.NoSuchElementException: None.get
   at scala.None$.get(Option.scala:347)
   at scala.None$.get(Option.scala:345)
   ... 32 elided
 
-scala> b.get("gwf").get
+scala> b.get("gwf").get  // 获取value
 res41: Int = 16
 
-scala> b.getOrElse("jd",9)
+scala> b.getOrElse("jd",9)  // 获取一个key的value获取不到则用默认值
 res42: Int = 9
 
 scala> b.getOrElse("gwf",9)
 res43: Int = 16
 
-scala> b("list") = 9
+scala> b("list") = 9  // 添加/修改一个元素
 
-scala> b+=("wangwu"->4,"zhouliu"->5)
+scala> b+=("wangwu"->4,"zhouliu"->5)  // 添加多个元素
 res45: b.type = Map(zhouliu -> 5, gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
 
-scala> b-=zhouliu
-<console>:13: error: not found: value zhouliu
-       b-=zhouliu
-          ^
-
-scala> b-="zhouliu"
+scala> b-="zhouliu"  // 删除元素
 res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
 ```
 
