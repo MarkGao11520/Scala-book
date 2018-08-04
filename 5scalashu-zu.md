@@ -211,6 +211,8 @@ res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
   }
 ```
 
+### 6.Option&Some&None
+
 
 
 
