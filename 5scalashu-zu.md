@@ -246,4 +246,20 @@ final case class Some[+A](x: A) extends Option[A] {
 ```
 
 ### 7.Tuple
+```scala
+
+object TupleApp extends App {
+
+  val a = (1,2,3,4,5,6) // 定义
+
+  a._1  // 取值
+
+  a._2
+
+  for(i <- 0 until(a.productArity)){  // 遍历
+    println(a.productElement(i))
+  }
+
+}
+```
 
