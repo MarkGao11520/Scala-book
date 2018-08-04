@@ -213,6 +213,35 @@ res47: b.type = Map(gwf -> 16, mzh -> 24, list -> 9, wangwu -> 4)
 
 ### 6.Option&Some&None
 
+Option 代表一个统一的返回值类型，他有两个子类None和Some。None只是一个case object，不存放数据。Some可以存放返回值数据。
 
+map的get方法返回的是一个Option类型。如果get对应的key有值就会放在Some里返回，如果没有值就会返回一个None
 
+```scala
+sealed abstract class Option[+A] extends Product with Serializable 
+
+/** This case object represents non-existent values.
+ *
+ *  @author  Martin Odersky
+ *  @version 1.0, 16/07/2003
+ */
+@SerialVersionUID(5066590221178148012L) // value computed by serialver for 2.11.2, annotation added in 2.11.4
+case object None extends Option[Nothing] {
+  def isEmpty = true
+  def get = throw new NoSuchElementException("None.get")
+}
+
+/** Class `Some[A]` represents existing values of type
+ *  `A`.
+ *
+ *  @author  Martin Odersky
+ *  @version 1.0, 16/07/2003
+ */
+@SerialVersionUID(1234815782226070388L) // value computed by serialver for 2.11.2, annotation added in 2.11.4
+final case class Some[+A](x: A) extends Option[A] {
+  def isEmpty = false
+  def get = x
+}
+
+```
 
