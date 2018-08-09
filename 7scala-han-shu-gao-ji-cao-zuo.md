@@ -37,3 +37,6 @@ add: (Int, Int) => Int
 scala> add(2,3)
 res21: Int = 5
 ```
+
+
+### 3. currying 函数
