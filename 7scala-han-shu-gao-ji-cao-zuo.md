@@ -40,3 +40,14 @@ res21: Int = 5
 
 
 ### 3. currying 函数
+
+```scala
+  def sum(a:Int,b:Int)= a+b
+
+  println(sum(1,2))
+
+  // 将原来接收两个参数的一个函数，转换成2个
+  def sum2(a:Int)(b:Int) = a+b
+  
+  println(sum2(1)(2))
+```
