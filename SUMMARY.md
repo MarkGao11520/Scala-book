@@ -7,4 +7,5 @@
 * [4.Scala 面向对象](4scala-mian-xiang-dui-xiang-gai-shu.md)
 * [5.Scala数组](5scalashu-zu.md)
 * [6.模式匹配](6mo-shi-pi-pei.md)
+* [7.Scala 函数高级操作](7scala-han-shu-gao-ji-cao-zuo.md)
 
