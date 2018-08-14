@@ -88,3 +88,19 @@ object MatchApp extends App {
   }
 ```
 
+### 8.Some None模式匹配
+
+```scala
+val grades = Map("zhangsan"->"A", "lise"->"B")
+
+  def getGrade(nase:String)={
+    val grade = grades.get(name)
+
+    grade match {
+      case Some(v) => println("your grade is "+v)
+      case None => println("sorry ....")
+    }
+  }
+
+```
+
